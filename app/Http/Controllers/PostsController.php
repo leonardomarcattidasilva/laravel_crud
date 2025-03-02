@@ -10,7 +10,6 @@ class PostsController extends Controller
     public function create(Request $r): object
     {
         $post = $r->all();
-        \dd($post);
         $model = new PostsModel($post);
         $status = $model->save();
         if ($status) {
